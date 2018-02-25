@@ -12,7 +12,7 @@ def CreateField(root_path):
 
     if os.path.exists(os.path.join(root_path, list_of_dirs[0])):
         print("Can not create a field because it already exists")
-        return False
+
     else:
         for i in range(len(list_of_text)):
 
@@ -23,7 +23,11 @@ def CreateField(root_path):
             f.close()
 
             root_path = os.path.join(root_path, list_of_dirs[i])
-        return True
+
+        print("Field successfully created")
+
+root_path = os.getcwd()
+CreateField(root_path)
 
 
 
